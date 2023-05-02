@@ -4,37 +4,40 @@
 #Bacchus Database
 DROP DATABASE If Exists BACCHUS;
 CREATE DATABASE BACCHUS;
-USE BACCHUS;
 
 #Drop Users
-DROP USER IF EXISTS 'bacchus_admin@localhost';
-DROP USER IF EXISTS 'sbacchus@localhost';
-DROP USER IF EXISTS 'dbacchus@localhost';
-DROP USER IF EXISTS 'jcollins@localhost';
-DROP USER IF EXISTS 'rmurphy@localhost';
-DROP USER IF EXISTS 'hdoyle@localhost';
-DROP USER IF EXISTS 'mcostanza@localhost';
-DROP USER IF EXISTS 'bmurphy@localhost';
+DROP USER IF EXISTS 'bacchus_admin'@'localhost';
+DROP USER IF EXISTS 'sbacchus'@'localhost';
+DROP USER IF EXISTS 'dbacchus'@'localhost';
+DROP USER IF EXISTS 'jcollins'@'localhost';
+DROP USER IF EXISTS 'rmurphy'@'localhost';
+DROP USER IF EXISTS 'hdoyle'@'localhost';
+DROP USER IF EXISTS 'mcostanza'@'localhost';
+DROP USER IF EXISTS 'bmurphy'@'localhost';
 
 #Create Users
-CREATE USER 'bacchus_admin@localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
-CREATE USER 'sbacchus@localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
-CREATE USER 'dbacchus@localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
-CREATE USER 'jcollins@localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
-CREATE USER 'rmurphy@localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
-CREATE USER 'hdoyle@localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
-CREATE USER 'mcostanza@localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
-CREATE USER 'bmurphy@localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+CREATE USER 'bacchus_admin'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+CREATE USER 'sbacchus'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+CREATE USER 'dbacchus'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+CREATE USER 'jcollins'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+CREATE USER 'rmurphy'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+CREATE USER 'hdoyle'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+CREATE USER 'mcostanza'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+CREATE USER 'bmurphy'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password123';
+
 
 #Grant privileges
-GRANT ALL PRIVILEGES ON bacchus.* TO 'bacchus_admin@localhost';
-GRANT ALL PRIVILEGES ON bacchus.* TO 'sbacchus@localhost';
-GRANT ALL PRIVILEGES ON bacchus.* TO 'dbacchus@localhost';
-GRANT ALL PRIVILEGES ON bacchus.* TO 'jcollins@localhost';
-GRANT ALL PRIVILEGES ON bacchus.* TO 'rmurphy@localhost';
-GRANT ALL PRIVILEGES ON bacchus.* TO 'hdoyle@localhost';
-GRANT ALL PRIVILEGES ON bacchus.* TO 'mcostanza@localhost';
-GRANT ALL PRIVILEGES ON bacchus.* TO 'rmurphy@localhost';
+GRANT ALL PRIVILEGES ON bacchus.* TO 'bacchus_admin'@'localhost';
+GRANT ALL PRIVILEGES ON bacchus.* TO 'sbacchus'@'localhost';
+GRANT ALL PRIVILEGES ON bacchus.* TO 'dbacchus'@'localhost';
+GRANT ALL PRIVILEGES ON bacchus.* TO 'jcollins'@'localhost';
+GRANT ALL PRIVILEGES ON bacchus.* TO 'rmurphy'@'localhost';
+GRANT ALL PRIVILEGES ON bacchus.* TO 'hdoyle'@'localhost';
+GRANT ALL PRIVILEGES ON bacchus.* TO 'mcostanza'@'localhost';
+GRANT ALL PRIVILEGES ON bacchus.* TO 'rmurphy'@'localhost';
+
+
+USE BACCHUS;
 
 #Drop Tables
 SET FOREIGN_KEY_CHECKS = 0;
