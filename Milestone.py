@@ -1,3 +1,8 @@
+# Group BETA
+# Members:  Darlene Batts, Michele Brand, Lidia Goris, Aubrey Reed
+# Milestone Case Study Project
+
+
 import mysql.connector
 
 
@@ -90,10 +95,6 @@ print("--DISPLAYING DISTRIBUTION RECORDS--")
 for row in result:
   print("Distributor ID:",row[0])
   print("Distributor Name:",row[1])
-  print("Date Ordered:",row[2])
-  print("Product Ordered:",row[3])
-  print("Amount Ordered:",row[4])
-  print("Date Delivered:",row[5])
   print(" ")
 
   
