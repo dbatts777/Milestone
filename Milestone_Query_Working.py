@@ -1,3 +1,5 @@
+#### Practice ONLY do not use for end results
+
 import mysql.connector
 
 
