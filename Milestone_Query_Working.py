@@ -96,3 +96,15 @@ for x in result:
   print("Wine ID: {}" .format(x[0]))
   print("Amount Ordered: {}" .format(x[1]))
   print("Distributor ID: {}" .format(x[2]))
+
+
+  # Display orders by Month Works
+getOrders = "SELECT MONTH(Order_Date) AS Month,Amount_Ordered, Date_Distributed, Expected_Delivery,Date_Delivered \
+FROM Orders \
+ORDER BY Month"
+cursor.execute(getOrders)
+Orderdates = cursor.fetchall()
+headers = [i[0] for i in cursor.description]
+print(headers)
+for row in Orderdates:
+  print(row)
